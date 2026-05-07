@@ -1,0 +1,13 @@
+[
+  "test_Lab3.py::test_SortAscending",
+  "test_Lab3.py::test_SortDescending",
+  "test_Lab3.py::test_ZeroNumbers",
+  "test_Lab3.py::test_bubble_sort_ascending",
+  "test_Lab3.py::test_bubble_sort_descending",
+  "test_Lab3.py::test_bubble_sort_invalid",
+  "test_Lab3.py::test_nMorethanequal10",
+  "test_Lab3.py::test_nonINT",
+  "test_bmi.py::test_bmi_normal_weight",
+  "test_bmi.py::test_bmi_over_weight",
+  "test_bmi.py::test_bmi_under_weight"
+]

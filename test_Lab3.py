@@ -1,30 +1,25 @@
-import Lab3
-
+import Lab3 as Lab3
 print("Test_Lab3")
 
 
-def test_bubble_sort_ascending():
-    result = []
-    input_arr = [64, 34, 25, 12, 22, 11, 90]
-    test_arr = [11, 12, 22, 25, 34, 64, 90]
+def test_SortAscending():
+    test_array = [55,88,33,44,99,100,80,67,76]
+    sorted_array = [33,44,55,67,76,80,88,99,100]
+    assert(Lab3.bubble_sort(test_array,Lab3.SORT_ASCENDING) == sorted_array)
 
-    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+def test_SortDescending():
+    test_array = [55,88,33,44,99,100,80,67,76]
+    sorted_array = [100,99,88,80,76,67,55,44,33]
+    assert(Lab3.bubble_sort(test_array,Lab3.SORT_DESCENDING) == sorted_array)
+    
+def test_nMorethanequal10():
+    test_array = [1,3,7,5,2,4,6,9,8,11,10]
+    assert(Lab3.bubble_sort(test_array,Lab3.SORT_DESCENDING) == 1)
 
-    assert (result == test_arr)
+def test_ZeroNumbers():
+    test_array = []
+    assert(Lab3.bubble_sort(test_array,Lab3.SORT_DESCENDING) == 0)
 
-def test_bubble_sort_descending():
-    result = []
-    input_arr = [64, 34, 25, 12, 22, 11, 90]
-    test_arr = [90, 64, 34, 25, 22, 12, 11]
-
-    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
-
-    assert (result == test_arr)
-
-def test_bubble_sort_invalid():
-    result = []
-    input_arr = [64, 34, 25, 12, 22, 11, 90]
-
-    result = Lab3.bubble_sort(input_arr, 3)
-
-    assert (result == [])
+def test_nonINT():
+    test_array = [55,88,33,44,99,100,80,67,"Yo"]
+    assert(Lab3.bubble_sort(test_array,Lab3.SORT_ASCENDING) == 2)
